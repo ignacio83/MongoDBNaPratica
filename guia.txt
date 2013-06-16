@@ -1,0 +1,23 @@
+1. Iniciar o Mongod vazio - Script: startMongodSimple.sh
+ 
+2. Importar projetos e periodicidades - importData.sh
+	Explicar o modelo
+	Rodar algumas queries
+		
+3. Rodar programa ListarProjetosPeriodicidades.
+
+4. Explicar o aggretation framework e agrupar por projetos, tanto por nome, quando por código.
+
+5. Baixar nó 1.
+
+6. Iniciar três nós - startMongodThreeNodes.sh
+
+7. Configurar o replicaset - config_replicaset.js
+
+8. Mostrar o replicaset em ação. Inserindo documentos.
+
+9. Gerar assinaturas aleatórias. Programa GerarAssinaturas
+
+10. Baixar um nó secundário e depois inicia-lo
+
+11. Baixar o nó primário...
