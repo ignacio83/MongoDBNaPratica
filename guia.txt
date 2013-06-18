@@ -21,3 +21,23 @@
 10. Baixar um nó secundário e depois inicia-lo
 
 11. Baixar o nó primário...
+
+12. Nesse ponto os três servidores devem ser desligados. Iniciar os outros 3 nós + configdb + mongos. - startMongodTwoShardsWithThreeNodes.sh
+
+13. Configurar o primeiro shard - config_shard.js
+
+14. Limpar a base e rodar o programa de carga de assinaturas. Programa GerarAssinaturas
+
+15. Configurar o replicaset no s2. config_replicaset_2.js
+
+16. Adicionar um novo shard. 
+
+17. Executar novalmente o programa que gera assinaturas, desta vez apontando para o mongos. Programa GerarAssinaturas
+
+18. Com o programa em execução shard em assinaturas - config_shard.js
+
+19. Parar programa. Executar o script gen_edicoes_disponiveis.
+
+20. Shard em acessos - config_shard.js. Se o autobalance, não disparar inserir mais alguns acessos.
+
+20. Terminar explicando TTL collection e capped collection

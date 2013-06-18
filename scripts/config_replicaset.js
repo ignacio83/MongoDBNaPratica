@@ -2,8 +2,8 @@ rsconf = {
    _id: "s1",
    members: [
               {
-               _id: 0,
-               host: "localhost:27001"
+                _id: 0,
+                host: "localhost:27001"
               }
               ,
               {

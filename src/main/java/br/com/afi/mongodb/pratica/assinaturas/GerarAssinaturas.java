@@ -17,7 +17,7 @@ import com.mongodb.MongoException.DuplicateKey;
 import com.mongodb.ServerAddress;
 
 public class GerarAssinaturas {
-	private static final int[] ANOS = new int[]{2005,2006,2007,2008,2009,2010,2011,2012,2013};
+	private static final int[] ANOS = new int[]{2010,2011,2012,2013};
 	private static final int MAX_EDICAO_ANO = 53;
 	private static final int QTD_ASSINANTES = 10000000;
 	private static final int QTD_TENTATIVAS = 10;
@@ -28,9 +28,11 @@ public class GerarAssinaturas {
 	public static void main(String...args) throws Exception{
 		final List<ServerAddress> servers = new ArrayList<ServerAddress>();
 		
-		servers.add(new ServerAddress("localhost:27001"));
+		servers.add(new ServerAddress("localhost:27017"));
+		
+		/*servers.add(new ServerAddress("localhost:27001"));
 		servers.add(new ServerAddress("localhost:27002"));
-		servers.add(new ServerAddress("localhost:27003"));
+		servers.add(new ServerAddress("localhost:27003"));*/
 		
 		final MongoClient mongoClient = new MongoClient(servers);
 		final DB db = mongoClient.getDB("internet");
