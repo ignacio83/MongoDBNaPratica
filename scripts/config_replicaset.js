@@ -18,8 +18,3 @@ rsconf = {
             ]
  };
 rs.initiate( rsconf );
-
-
-for(var i;i<100000000:i++){
-	db.teste.insert({teste: i});
-}
