@@ -26,6 +26,9 @@ public class GerarAssinaturas {
 	private static DBCollection assinaturasCollection;
 	
 	public static void main(String...args) throws Exception{
+		if(args.length==0){
+			System.out.println("Informe o endereço do servidor MongoDB");
+		}
 		final List<ServerAddress> servers = new ArrayList<ServerAddress>();
 		
 		servers.add(new ServerAddress(args[0]));
