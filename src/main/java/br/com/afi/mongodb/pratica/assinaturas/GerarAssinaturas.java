@@ -27,23 +27,28 @@ public class GerarAssinaturas {
 	
 	public static void main(String...args) throws Exception{
 		if(args.length==0){
-			System.out.println("Informe o endereço do servidor MongoDB");
+			System.out.println("Informe pelo menos um endereço do servidor MongoDB");
 		}
-		final List<ServerAddress> servers = new ArrayList<ServerAddress>();
-		
-		servers.add(new ServerAddress(args[0]));
-		
-		/*servers.add(new ServerAddress("localhost:27001"));
-		servers.add(new ServerAddress("localhost:27002"));
-		servers.add(new ServerAddress("localhost:27003"));*/
-		
-		final MongoClient mongoClient = new MongoClient(servers);
-		final DB db = mongoClient.getDB("internet");
-		projetosCollection = db.getCollection("projetos");
-		assinaturasCollection = db.getCollection("assinaturas");
-		
-		final Integer[] codProjetos = getCodProjetos();
-		insertAssinaturasRandom(codProjetos);
+		else{
+			final List<ServerAddress> servers = new ArrayList<ServerAddress>();
+			
+			for(String arg : args){
+				servers.add(new ServerAddress(arg));	
+			}
+			
+			/*servers.add(new ServerAddress("localhost:27001"));
+			servers.add(new ServerAddress("localhost:27002"));
+			servers.add(new ServerAddress("localhost:27003"));*/
+			
+			final MongoClient mongoClient = new MongoClient(servers);
+			final DB db = mongoClient.getDB("internet");
+			projetosCollection = db.getCollection("projetos");
+			assinaturasCollection = db.getCollection("assinaturas");
+			
+			final Integer[] codProjetos = getCodProjetos();
+			System.out.println("Inserindo assinaturas...");
+			insertAssinaturasRandom(codProjetos);
+		}
 		
 	}
 	
