@@ -4,9 +4,9 @@
 	Explicar o modelo
 	Rodar algumas queries
 		
-3. Rodar programa ListarProjetosPeriodicidades.
+3. Rodar programa ListarProjetosPeriodicidades. run_listar_periodicidades.sh
 
-4. Explicar o aggretation framework e agrupar por projetos, tanto por nome, quando por código.
+4. Explicar o aggretation framework e agrupar por projetos, tanto por nome, quando por código. aggregate_periodicidade.js
 
 5. Baixar nó 1.
 
@@ -16,7 +16,7 @@
 
 8. Mostrar o replicaset em ação. Inserindo documentos.
 
-9. Gerar assinaturas aleatórias. Programa GerarAssinaturas
+9. Gerar assinaturas aleatórias. Programa GerarAssinaturas. run_gerar_assinaturas_on_replica_set.sh
 
 10. Baixar um nó secundário e depois inicia-lo
 
