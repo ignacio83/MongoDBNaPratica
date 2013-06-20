@@ -28,7 +28,7 @@ public class GerarAssinaturas {
 	public static void main(String...args) throws Exception{
 		final List<ServerAddress> servers = new ArrayList<ServerAddress>();
 		
-		servers.add(new ServerAddress("localhost:27017"));
+		servers.add(new ServerAddress(args[0]));
 		
 		/*servers.add(new ServerAddress("localhost:27001"));
 		servers.add(new ServerAddress("localhost:27002"));
